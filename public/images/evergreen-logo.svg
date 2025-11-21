@@ -1,0 +1,44 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Circular Background -->
+  <circle cx="100" cy="100" r="100" fill="#1B4332"/>
+  
+  <!-- Sun (top center, behind tree) -->
+  <path d="M 100 20 Q 80 30 70 50 Q 60 40 50 50 Q 55 35 60 30 Q 70 20 100 20 Z" fill="#FDB813" opacity="0.9"/>
+  <line x1="50" y1="30" x2="45" y2="25" stroke="#FDB813" stroke-width="2"/>
+  <line x1="60" y1="25" x2="58" y2="20" stroke="#FDB813" stroke-width="2"/>
+  <line x1="70" y1="30" x2="72" y2="25" stroke="#FDB813" stroke-width="2"/>
+  
+  <!-- Winding Path/River (gradient from bottom to tree) -->
+  <path d="M 100 180 Q 95 160 90 140 Q 88 120 85 100 Q 90 80 95 70 Q 98 60 100 55" 
+        fill="none" 
+        stroke="#52B788" 
+        stroke-width="8" 
+        stroke-linecap="round"/>
+  <path d="M 100 180 Q 105 160 110 140 Q 112 120 115 100 Q 110 80 105 70 Q 102 60 100 55" 
+        fill="none" 
+        stroke="#6C584C" 
+        stroke-width="2" 
+        stroke-linecap="round"/>
+  
+  <!-- Tree Trunk -->
+  <rect x="95" y="70" width="10" height="50" fill="#D4A574" rx="2"/>
+  
+  <!-- Tree Canopy (full foliage with dots) -->
+  <circle cx="100" cy="80" r="35" fill="#52B788" opacity="0.9"/>
+  <circle cx="90" cy="75" r="8" fill="#6B8E23"/>
+  <circle cx="110" cy="75" r="8" fill="#6B8E23"/>
+  <circle cx="85" cy="85" r="6" fill="#6B8E23"/>
+  <circle cx="115" cy="85" r="6" fill="#6B8E23"/>
+  <circle cx="95" cy="70" r="7" fill="#6B8E23"/>
+  <circle cx="105" cy="70" r="7" fill="#6B8E23"/>
+  <circle cx="100" cy="65" r="8" fill="#6B8E23"/>
+  <circle cx="88" cy="90" r="5" fill="#6B8E23"/>
+  <circle cx="112" cy="90" r="5" fill="#6B8E23"/>
+  
+  <!-- Mountain/Hill shapes (subtle hands cradling tree) -->
+  <path d="M 30 100 Q 40 80 50 90 Q 60 100 70 110 Q 65 120 60 130 Q 50 125 40 120 Q 30 115 30 100 Z" 
+        fill="#D4A574" opacity="0.6"/>
+  <path d="M 170 100 Q 160 80 150 90 Q 140 100 130 110 Q 135 120 140 130 Q 150 125 160 120 Q 170 115 170 100 Z" 
+        fill="#D4A574" opacity="0.6"/>
+</svg>
+

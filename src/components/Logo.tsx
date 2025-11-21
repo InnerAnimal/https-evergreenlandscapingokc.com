@@ -1,0 +1,41 @@
+import Image from 'next/image'
+import Link from 'next/link'
+
+interface LogoProps {
+  showText?: boolean
+  size?: 'sm' | 'md' | 'lg'
+  className?: string
+}
+
+export default function Logo({ showText = true, size = 'md', className = '' }: LogoProps) {
+  const sizeClasses = {
+    sm: 'h-8 w-8',
+    md: 'h-10 w-10',
+    lg: 'h-16 w-16',
+  }
+
+  const textSizes = {
+    sm: 'text-sm',
+    md: 'text-lg',
+    lg: 'text-2xl',
+  }
+
+  return (
+    <Link href="/" className={`flex items-center space-x-2 ${className}`}>
+      <Image
+        src="/images/evergreen-logo.svg"
+        alt="Evergreen Landscaping OKC Logo"
+        width={size === 'sm' ? 32 : size === 'md' ? 40 : 64}
+        height={size === 'sm' ? 32 : size === 'md' ? 40 : 64}
+        className={sizeClasses[size]}
+        priority
+      />
+      {showText && (
+        <span className={`font-bold text-deepForest ${textSizes[size]}`}>
+          Evergreen Landscaping OKC
+        </span>
+      )}
+    </Link>
+  )
+}
+

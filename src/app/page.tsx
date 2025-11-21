@@ -15,7 +15,7 @@ export default function Home() {
           <p className="text-lg md:text-xl mb-12 max-w-2xl opacity-90">
             We're dedicated to helping homeowners and businesses transform their properties into spaces that stand out year-round, with quality, reliability, and care you can trust.
           </p>
-          
+
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 mb-16">
             <Link
@@ -59,7 +59,7 @@ export default function Home() {
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
             Comprehensive property care solutions for residential and commercial properties throughout Oklahoma City and surrounding areas.
           </p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             {/* Lawn Care */}
             <div className="bg-gradient-to-br from-vibrantGreen/10 to-skyBlue/10 rounded-lg p-8 border border-vibrantGreen/20 hover:shadow-xl transition-shadow">
