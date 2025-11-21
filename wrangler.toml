@@ -2,3 +2,23 @@ name = "evergreen-landscaping-okc"
 compatibility_date = "2024-11-21"
 pages_build_output_dir = "out"
 
+# Cloudflare Pages Configuration
+# Build command: npm run build
+# Build output directory: out
+# Deploy command: (leave blank - Cloudflare handles this automatically)
+
+# Future D1 Database Configuration (uncomment when needed)
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "evergreen-db"
+# database_id = "your-database-id-here"
+
+# Future R2 Storage Configuration (uncomment when needed)
+# [[r2_buckets]]
+# binding = "ASSETS"
+# bucket_name = "evergreen-assets"
+
+# Future KV Namespace Configuration (uncomment when needed)
+# [[kv_namespaces]]
+# binding = "CACHE"
+# id = "your-kv-namespace-id"
