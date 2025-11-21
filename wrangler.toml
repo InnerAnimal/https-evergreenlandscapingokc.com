@@ -1,0 +1,7 @@
+name = "evergreen-landscaping-okc"
+compatibility_date = "2024-11-21"
+pages_build_output_dir = ".next"
+
+[build]
+command = "npm run build"
+
