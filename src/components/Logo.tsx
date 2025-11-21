@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Link from 'next/link'
 
 interface LogoProps {
@@ -20,18 +19,23 @@ export default function Logo({ showText = true, size = 'md', className = '' }: L
     lg: 'text-2xl',
   }
 
+  const textColors = {
+    sm: 'text-white',
+    md: 'text-white',
+    lg: 'text-deepForest',
+  }
+
   return (
     <Link href="/" className={`flex items-center space-x-2 ${className}`}>
-      <Image
+      <img
         src="/images/evergreen-logo.svg"
         alt="Evergreen Landscaping OKC Logo"
         width={size === 'sm' ? 32 : size === 'md' ? 40 : 64}
         height={size === 'sm' ? 32 : size === 'md' ? 40 : 64}
         className={sizeClasses[size]}
-        priority
       />
       {showText && (
-        <span className={`font-bold text-deepForest ${textSizes[size]}`}>
+        <span className={`font-bold ${textColors[size]} ${textSizes[size]}`}>
           Evergreen Landscaping OKC
         </span>
       )}
