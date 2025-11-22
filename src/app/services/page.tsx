@@ -1,254 +1,81 @@
 import Link from 'next/link'
 
 export const metadata = {
-    title: 'Services | Evergreen Landscaping OKC',
-    description: '80+ professional landscaping and property care services in Oklahoma City. Lawn care, design, seasonal services, pressure washing, and more.',
+    title: 'Services | Evergrow Landscaping',
+    description: 'Professional landscaping services in Oklahoma City. Lawn care, landscaping design, seasonal services, and pressure washing.',
 }
-
-const serviceCategories = [
-    {
-        id: 'lawn-care',
-        title: 'Lawn Care & Maintenance',
-        icon: '🌱',
-        description: 'Complete lawn care services to keep your yard healthy and beautiful year-round.',
-        services: [
-            'Lawn Mowing',
-            'Weed-Eating',
-            'Edging',
-            'Blowing',
-            'Lawn Dethatching',
-            'Lawn Aeration',
-            'Lawn Fertilizing',
-            'Overseeding',
-            'Hydroseeding',
-            'Top Dressing',
-            'Watering Services',
-        ],
-    },
-    {
-        id: 'landscaping',
-        title: 'Landscaping & Design',
-        icon: '🌳',
-        description: 'Custom landscape design and installation to transform your outdoor space.',
-        services: [
-            'Bed Cleanups',
-            'Mulch Installation',
-            'Rock Installation',
-            'Landscape Fabric Installation',
-            'Bed Edging (Stone, Brick, & Steel)',
-            'Bed Reshaping',
-            'Flower Bed Installation',
-            'Planting (Flowers, Shrubs, & Trees)',
-            'Removing Plants (Shrubs & Trees)',
-            'Raised Garden Beds',
-            'Vegetable Garden Installation',
-            'Garden Soil Improvement',
-            'Compost Installation',
-            'Landscape Lighting Installation',
-        ],
-    },
-    {
-        id: 'seasonal',
-        title: 'Seasonal & Cleanup Services',
-        icon: '🍂',
-        description: 'Seasonal maintenance and cleanup to keep your property looking its best.',
-        services: [
-            'Leaf Cleanup',
-            'Leaf Removal',
-            'Storm Debris Cleanup',
-            'Bush-Hogging',
-            'Fence Line Mowing',
-            'Gravel Road Vegetation Clearing',
-            'Weed Pulling',
-            'Small Tree Trimming',
-            'Stump Grinding',
-            'Hedge Shearing',
-            'Shrub Shaping',
-        ],
-    },
-    {
-        id: 'hardscaping',
-        title: 'Hardscaping & Outdoor Living',
-        icon: '🏗️',
-        description: 'Create beautiful outdoor living spaces with professional hardscaping services.',
-        services: [
-            'Patios (Paver & Concrete)',
-            'Walkways (Stone & Brick)',
-            'Paver Driveways',
-            'Retaining Walls (Stone, Block, & Boulder)',
-            'Fire Pits',
-            'Fences (Wooden, Vinyl, & Steel)',
-            'Gravel Installation',
-            'Drains (French & Trench)',
-            'Grading',
-            'Sod Installation',
-            'Path Lighting',
-            'Fountain Installation',
-            'Waterfall Features',
-            'Koi Ponds',
-        ],
-    },
-    {
-        id: 'pest-control',
-        title: 'Pest & Weed Control',
-        icon: '🐛',
-        description: 'Professional pest and weed control to protect your property.',
-        services: [
-            'Pre-Emergent',
-            'Post-Emergent',
-            'Pavement Weed Control',
-            'Fence-Line Vegetation Kill',
-            'Poison Ivy Removal',
-            'Fire Ant Treatments',
-            'Mosquito Spraying',
-            'Flea & Tick Yard Treatment',
-            'Perimeter House Insect Barrier',
-            'Soil Testing',
-        ],
-    },
-    {
-        id: 'irrigation',
-        title: 'Irrigation & Drainage',
-        icon: '💧',
-        description: 'Complete irrigation system installation, repair, and maintenance.',
-        services: [
-            'Sprinkler Repair',
-            'Sprinkler Head Replacement',
-            'Valve Replacement',
-            'Controller Installation',
-            'System Troubleshooting',
-            'System Winterization',
-            'Drip Irrigation System',
-            'Irrigation System',
-            'Water Pressure Testing',
-            'Add-On Sprinkler Zones',
-            'Rain Sensor Installation',
-        ],
-    },
-    {
-        id: 'pressure-washing',
-        title: 'Exterior Cleaning & Maintenance',
-        icon: '🧹',
-        description: 'Professional cleaning services to restore your property\'s appearance.',
-        services: [
-            'Soft Washing (Roof & Siding)',
-            'Pressure Washing (Siding, Deck, Fence, Driveway, Sidewalk, Patio, & Parking Lot)',
-            'Surface Sealing (Driveway, Sidewalk, Patio, & Parking Lot)',
-            'Gutter Cleaning',
-            'Roof Cleaning',
-            'Fence Line Clearing',
-            'Window Cleaning',
-        ],
-    },
-    {
-        id: 'winter',
-        title: 'Winter & Specialty Services',
-        icon: '❄️',
-        description: 'Year-round specialty services including winter maintenance and holiday decorations.',
-        services: [
-            'Snow Removal',
-            'De-Icing',
-            'Salting',
-            'Holiday Lights Installation',
-            'Firewood Delivery',
-            'Outdoor Furniture Installation',
-        ],
-    },
-]
 
 export default function ServicesPage() {
     return (
         <main className="min-h-screen bg-white">
             {/* Hero Section */}
-            <section className="bg-gradient-to-r from-deepForest to-vibrantGreen text-white py-20 px-4">
-                <div className="max-w-6xl mx-auto text-center">
-                    <h1 className="text-5xl md:text-6xl font-bold mb-6">Our Services</h1>
-                    <p className="text-xl md:text-2xl mb-4 max-w-3xl mx-auto">
-                        Comprehensive Property Care Solutions
-                    </p>
-                    <p className="text-lg opacity-90 max-w-2xl mx-auto">
-                        Over 80 professional services to keep your property looking its best year-round. From lawn care to hardscaping, we've got you covered.
-                    </p>
-                </div>
-            </section>
-
-            {/* Service Categories */}
-            <section className="py-20 px-4">
-                <div className="max-w-7xl mx-auto">
-                    <div className="space-y-16">
-                        {serviceCategories.map((category) => (
-                            <div key={category.id} id={category.id} className="scroll-mt-20">
-                                <div className="flex items-center gap-4 mb-6">
-                                    <span className="text-5xl">{category.icon}</span>
-                                    <div>
-                                        <h2 className="text-3xl font-bold text-deepForest mb-2">
-                                            {category.title}
-                                        </h2>
-                                        <p className="text-gray-600 text-lg">{category.description}</p>
-                                    </div>
-                                </div>
-
-                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
-                                    {category.services.map((service, idx) => (
-                                        <div
-                                            key={idx}
-                                            className="bg-gradient-to-br from-vibrantGreen/5 to-skyBlue/5 border border-vibrantGreen/20 rounded-lg p-4 hover:shadow-md transition-shadow"
-                                        >
-                                            <div className="flex items-center gap-2">
-                                                <span className="text-vibrantGreen">✓</span>
-                                                <span className="text-deepForest font-medium">{service}</span>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Special Offer Banner */}
-            <section className="bg-sunsetOrange text-white py-12 px-4">
+            <section className="bg-gradient-to-br from-forestGreen to-freshGreen text-white py-20 px-4">
                 <div className="max-w-4xl mx-auto text-center">
-                    <h2 className="text-3xl font-bold mb-4">Special Offer: 25% OFF</h2>
-                    <p className="text-xl mb-6">
-                        Sign up for roof maintenance services between November 17th-30th to get 25% off - ALL season long!
+                    <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Services</h1>
+                    <p className="text-xl opacity-90">
+                        Professional landscaping and property care services for Oklahoma City homes and businesses.
                     </p>
-                    <Link
-                        href="/contact"
-                        className="inline-block bg-white text-sunsetOrange hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors shadow-lg"
-                    >
-                        Get Started Today
-                    </Link>
+                </div>
+            </section>
+
+            {/* Services Grid */}
+            <section className="py-20 px-4">
+                <div className="max-w-6xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        {/* Lawn Care & Maintenance */}
+                        <div className="bg-gradient-to-br from-freshGreen/10 to-forestGreen/5 rounded-lg p-8 border border-freshGreen/20">
+                            <div className="text-4xl mb-4">🌱</div>
+                            <h2 className="text-2xl font-bold text-forestGreen mb-4">Lawn Care & Maintenance</h2>
+                            <p className="text-gray-700 leading-relaxed">
+                                A healthy, well-kept lawn is the foundation of every great landscape. Our professional lawn care services ensure your yard stays lush, green, and perfectly maintained throughout the season. We handle everything from mowing, trimming, and edging to fertilization and weed control- keeping your grass strong and vibrant. With consistent maintenance and attention to detail, we take the stress out of lawn care so you can simply enjoy a beautiful, polished yard that stands out in your neighborhood.
+                            </p>
+                        </div>
+
+                        {/* Landscaping & Design */}
+                        <div className="bg-gradient-to-br from-forestGreen/5 to-freshGreen/10 rounded-lg p-8 border border-forestGreen/20">
+                            <div className="text-4xl mb-4">🌳</div>
+                            <h2 className="text-2xl font-bold text-forestGreen mb-4">Landscaping & Design</h2>
+                            <p className="text-gray-700 leading-relaxed">
+                                Your landscape should reflect your style and enhance your property's beauty. Whether you're starting from scratch or refreshing an existing design, we create customized landscaping solutions that bring your vision to life. From plant selection and flower bed design to mulch installation and decorative rock layouts, we focus on details that make your home look its best. Our goal is to create outdoor spaces that not only look amazing, but are functional, sustainable, and easy to maintain.
+                            </p>
+                        </div>
+
+                        {/* Seasonal Services */}
+                        <div className="bg-gradient-to-br from-earthBrown/10 to-freshGreen/10 rounded-lg p-8 border border-earthBrown/20">
+                            <div className="text-4xl mb-4">🍂</div>
+                            <h2 className="text-2xl font-bold text-forestGreen mb-4">Seasonal Services</h2>
+                            <p className="text-gray-700 leading-relaxed">
+                                Each season brings new challenges for your landscape- from falling leaves in autumn to overgrown beds in spring. Our seasonal cleanup services keep your property looking clean, healthy, and ready for whatever the weather brings. We remove leaves, sticks, and debris; refresh mulch, trim plants; and prepare your lawn and flower beds for the next season. Whether it's a quick spruce-up or a full property cleanup, we make sure your yard looks well cared for year-round so you can relax and enjoy your outdoor space.
+                            </p>
+                        </div>
+
+                        {/* Pressure Washing */}
+                        <div className="bg-gradient-to-br from-freshGreen/10 to-earthBrown/10 rounded-lg p-8 border border-freshGreen/20">
+                            <div className="text-4xl mb-4">💧</div>
+                            <h2 className="text-2xl font-bold text-forestGreen mb-4">Pressure Washing</h2>
+                            <p className="text-gray-700 leading-relaxed">
+                                Over time, dirt, mold, algae, and grime can dull your home's appearance and damage outdoor surfaces. Our pressure washing services restore your property's clean, fresh look by safely removing built-up residue from driveways, patios, siding, decks, and walkways. We use professional-grade equipment to achieve a deep clean without harming your surfaces. A simple wash can make your home look newer, brighter, and well cared for- boosting curb appeal and protecting your investment for years to come.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
             {/* CTA Section */}
-            <section className="bg-gray-50 py-20 px-4">
-                <div className="max-w-4xl mx-auto text-center">
-                    <h2 className="text-4xl font-bold text-deepForest mb-6">
-                        Ready to Get Started?
-                    </h2>
-                    <p className="text-xl text-gray-600 mb-8">
-                        Did you find services that interest you? Contact us today for a free quote!
+            <section className="bg-gradient-to-r from-forestGreen to-freshGreen py-16 px-4">
+                <div className="max-w-4xl mx-auto text-center text-white">
+                    <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
+                    <p className="text-lg mb-8 opacity-90">
+                        Contact us today for a free estimate on any of our services.
                     </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Link
-                            href="/contact"
-                            className="bg-sunsetOrange hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors shadow-lg"
-                        >
-                            Get Free Quote
-                        </Link>
-                        <a
-                            href="tel:+1234567890"
-                            className="bg-deepForest hover:bg-deepForest/90 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors shadow-lg"
-                        >
-                            Call: (123) 456-7890
-                        </a>
-                    </div>
+                    <Link
+                        href="/contact"
+                        className="inline-block bg-white text-forestGreen hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors shadow-lg"
+                    >
+                        Get Free Quote
+                    </Link>
                 </div>
             </section>
         </main>
     )
 }
-

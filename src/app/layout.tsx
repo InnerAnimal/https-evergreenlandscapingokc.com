@@ -4,9 +4,9 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
 export const metadata: Metadata = {
-  title: 'Evergreen Landscaping OKC | Oklahoma City Property Care',
-  description: 'Oklahoma City\'s Premier Year-Round Property Care Partner - 80+ Services, 10+ Cities Served',
-  keywords: 'landscaping, lawn care, Oklahoma City, OKC, property maintenance, snow removal, pressure washing',
+  title: 'Evergrow Landscaping | Oklahoma City Property Care',
+  description: 'Oklahoma City\'s Premier Year-Round Property Care Partner. Professional landscaping, lawn care, seasonal services, and pressure washing.',
+  keywords: 'landscaping, lawn care, Oklahoma City, OKC, property maintenance, pressure washing, seasonal cleanup',
   icons: {
     icon: [
       { url: '/icons/favicon.svg', type: 'image/svg+xml' },
@@ -33,4 +33,3 @@ export default function RootLayout({
     </html>
   )
 }
-

@@ -22,21 +22,21 @@ export default function Logo({ showText = true, size = 'md', className = '' }: L
   const textColors = {
     sm: 'text-white',
     md: 'text-white',
-    lg: 'text-deepForest',
+    lg: 'text-forestGreen',
   }
 
   return (
     <Link href="/" className={`flex items-center space-x-2 ${className}`}>
       <img
         src="/images/evergreen-logo.svg"
-        alt="Evergreen Landscaping OKC Logo"
+        alt="Evergrow Landscaping Logo"
         width={size === 'sm' ? 32 : size === 'md' ? 40 : 64}
         height={size === 'sm' ? 32 : size === 'md' ? 40 : 64}
         className={sizeClasses[size]}
       />
       {showText && (
         <span className={`font-bold ${textColors[size]} ${textSizes[size]}`}>
-          Evergreen Landscaping OKC
+          Evergrow Landscaping
         </span>
       )}
     </Link>

@@ -9,11 +9,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        deepForest: '#1B4332',
-        vibrantGreen: '#52B788',
-        earthBrown: '#6C584C',
-        skyBlue: '#4A90A4',
-        sunsetOrange: '#F77F00',
+        forestGreen: '#2d5016',
+        freshGreen: '#7cb342',
+        earthBrown: '#8B7355',
+        lightGray: '#f8f9fa',
+        darkText: '#333333',
+        white: '#ffffff',
       },
     },
   },
