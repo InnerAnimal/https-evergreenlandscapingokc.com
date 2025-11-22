@@ -1,78 +1,115 @@
 import Link from 'next/link'
 
 export const metadata = {
-    title: 'Services | Evergrow Landscaping',
-    description: 'Professional landscaping services in Oklahoma City. Lawn care, landscaping design, seasonal services, and pressure washing.',
+    title: 'Services | Evergreen Landscaping',
+    description: 'Professional landscaping services in Oklahoma City. Over 50 services including lawn care, landscaping, pressure washing, and more.',
 }
 
 export default function ServicesPage() {
     return (
         <main className="min-h-screen bg-white">
-            {/* Hero Section */}
-            <section className="bg-gradient-to-br from-forestGreen to-freshGreen text-white py-20 px-4">
+            {/* Page Title */}
+            <section className="py-8 px-4">
                 <div className="max-w-4xl mx-auto text-center">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Services</h1>
-                    <p className="text-xl opacity-90">
-                        Professional landscaping and property care services for Oklahoma City homes and businesses.
-                    </p>
+                    <h1 className="text-3xl font-bold text-forestGreen border-b-2 border-forestGreen inline-block pb-2">
+                        Services
+                    </h1>
                 </div>
             </section>
 
-            {/* Services Grid */}
-            <section className="py-20 px-4">
-                <div className="max-w-6xl mx-auto">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        {/* Lawn Care & Maintenance */}
-                        <div className="bg-gradient-to-br from-freshGreen/10 to-forestGreen/5 rounded-lg p-8 border border-freshGreen/20">
-                            <div className="text-4xl mb-4">🌱</div>
-                            <h2 className="text-2xl font-bold text-forestGreen mb-4">Lawn Care & Maintenance</h2>
-                            <p className="text-gray-700 leading-relaxed">
-                                A healthy, well-kept lawn is the foundation of every great landscape. Our professional lawn care services ensure your yard stays lush, green, and perfectly maintained throughout the season. We handle everything from mowing, trimming, and edging to fertilization and weed control- keeping your grass strong and vibrant. With consistent maintenance and attention to detail, we take the stress out of lawn care so you can simply enjoy a beautiful, polished yard that stands out in your neighborhood.
-                            </p>
-                        </div>
+            {/* Services List */}
+            <section className="py-8 px-4">
+                <div className="max-w-2xl mx-auto">
+                    <ul className="text-forestGreen space-y-2 text-left">
+                        {/* Lawn Services */}
+                        <li>Lawn Mowing</li>
+                        <li>Weed-Eating</li>
+                        <li>Edging</li>
+                        <li>Blowing</li>
+                        <li>Lawn Dethatching</li>
+                        <li>Lawn Aeration</li>
+                        <li>Lawn Fertilizing</li>
+                        <li>Overseeding</li>
+                        <li>Hydroseeding</li>
+                        <li>Top Dressing</li>
 
-                        {/* Landscaping & Design */}
-                        <div className="bg-gradient-to-br from-forestGreen/5 to-freshGreen/10 rounded-lg p-8 border border-forestGreen/20">
-                            <div className="text-4xl mb-4">🌳</div>
-                            <h2 className="text-2xl font-bold text-forestGreen mb-4">Landscaping & Design</h2>
-                            <p className="text-gray-700 leading-relaxed">
-                                Your landscape should reflect your style and enhance your property's beauty. Whether you're starting from scratch or refreshing an existing design, we create customized landscaping solutions that bring your vision to life. From plant selection and flower bed design to mulch installation and decorative rock layouts, we focus on details that make your home look its best. Our goal is to create outdoor spaces that not only look amazing, but are functional, sustainable, and easy to maintain.
-                            </p>
-                        </div>
+                        {/* Seasonal/Cleanup */}
+                        <li>Leaf Cleanup</li>
+                        <li>Leaf Removal</li>
+                        <li>Storm Debris Cleanup</li>
+                        <li>Bush-Hogging</li>
+                        <li>Fence Line Mowing</li>
+                        <li>Gravel Road Vegetation Clearing</li>
+                        <li>Weed Pulling</li>
+                        <li>Bed Cleanups</li>
 
-                        {/* Seasonal Services */}
-                        <div className="bg-gradient-to-br from-earthBrown/10 to-freshGreen/10 rounded-lg p-8 border border-earthBrown/20">
-                            <div className="text-4xl mb-4">🍂</div>
-                            <h2 className="text-2xl font-bold text-forestGreen mb-4">Seasonal Services</h2>
-                            <p className="text-gray-700 leading-relaxed">
-                                Each season brings new challenges for your landscape- from falling leaves in autumn to overgrown beds in spring. Our seasonal cleanup services keep your property looking clean, healthy, and ready for whatever the weather brings. We remove leaves, sticks, and debris; refresh mulch, trim plants; and prepare your lawn and flower beds for the next season. Whether it's a quick spruce-up or a full property cleanup, we make sure your yard looks well cared for year-round so you can relax and enjoy your outdoor space.
-                            </p>
-                        </div>
+                        {/* Landscaping */}
+                        <li>Watering Services</li>
+                        <li>Mulch Installation</li>
+                        <li>Rock Installation</li>
+                        <li>Landscape Fabric Installation</li>
+                        <li>Bed Edging (Stone, Brick, & Steel)</li>
+                        <li>Bed Reshaping</li>
+                        <li>Flower Bed Installation</li>
+                        <li>Planting (Flowers, Shrubs, & Trees)</li>
+                        <li>Removing Plants (Shrubs & Trees)</li>
 
-                        {/* Pressure Washing */}
-                        <div className="bg-gradient-to-br from-freshGreen/10 to-earthBrown/10 rounded-lg p-8 border border-freshGreen/20">
-                            <div className="text-4xl mb-4">💧</div>
-                            <h2 className="text-2xl font-bold text-forestGreen mb-4">Pressure Washing</h2>
-                            <p className="text-gray-700 leading-relaxed">
-                                Over time, dirt, mold, algae, and grime can dull your home's appearance and damage outdoor surfaces. Our pressure washing services restore your property's clean, fresh look by safely removing built-up residue from driveways, patios, siding, decks, and walkways. We use professional-grade equipment to achieve a deep clean without harming your surfaces. A simple wash can make your home look newer, brighter, and well cared for- boosting curb appeal and protecting your investment for years to come.
-                            </p>
-                        </div>
-                    </div>
+                        {/* Weed & Pest Control */}
+                        <li>Pre-Emergent</li>
+                        <li>Post-Emergent</li>
+                        <li>Pavement Weed Control</li>
+                        <li>Fence-Line Vegetation Kill</li>
+                        <li>Poison Ivy Removal</li>
+                        <li>Fire Ant Treatments</li>
+                        <li>Mosquito Spraying</li>
+                        <li>Flea & Tick Yard Treatment</li>
+                        <li>Perimeter House Insect Barrier</li>
+                        <li>Soil Testing</li>
+
+                        {/* Irrigation */}
+                        <li>Sprinkler Repair</li>
+                        <li>Sprinkler Head Replacement</li>
+                        <li>Valve Replacement</li>
+                        <li>Controller Installation</li>
+                        <li>System Troubleshooting</li>
+                        <li>System Winterization</li>
+                        <li>Drip Irrigation System</li>
+                        <li>Irrigation System</li>
+                        <li>Water Pressure Testing</li>
+                        <li>Add-On Sprinkler Zones</li>
+                        <li>Rain Sensor Installation</li>
+
+                        {/* Washing & Cleaning */}
+                        <li>Soft Washing (Roof & Siding)</li>
+                        <li>Pressure Washing (Siding, Deck, Fence, Driveway, Sidewalk, Patio, & Parking Lot)</li>
+                        <li>Surface Sealing (Driveway, Sidewalk, Patio, & Parking Lot)</li>
+                        <li>Gutter Cleaning</li>
+                        <li>Roof Cleaning</li>
+                        <li>Fence Line Clearing</li>
+                        <li>Window Cleaning</li>
+
+                        {/* Seasonal/Special */}
+                        <li>Holiday Lights Installation</li>
+                        <li>Firewood Delivery</li>
+                        <li>Snow Removal</li>
+                        <li>De-Icing</li>
+                        <li>Salting</li>
+                        <li>Outdoor Furniture Installation</li>
+                    </ul>
                 </div>
             </section>
 
             {/* CTA Section */}
-            <section className="bg-gradient-to-r from-forestGreen to-freshGreen py-16 px-4">
-                <div className="max-w-4xl mx-auto text-center text-white">
-                    <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
-                    <p className="text-lg mb-8 opacity-90">
-                        Contact us today for a free estimate on any of our services.
+            <section className="py-12 px-4">
+                <div className="max-w-4xl mx-auto text-center">
+                    <p className="text-forestGreen text-lg mb-6">
+                        Did you find any services that you want? If so, get started TODAY!
                     </p>
                     <Link
                         href="/contact"
-                        className="inline-block bg-white text-forestGreen hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors shadow-lg"
+                        className="inline-block bg-forestGreen text-white px-8 py-3 rounded font-medium hover:bg-darkGreen transition-colors"
                     >
-                        Get Free Quote
+                        Get Started
                     </Link>
                 </div>
             </section>

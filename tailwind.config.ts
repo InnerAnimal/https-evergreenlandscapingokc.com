@@ -9,12 +9,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        forestGreen: '#2d5016',
-        freshGreen: '#7cb342',
-        earthBrown: '#8B7355',
+        forestGreen: '#2d5a3d',
+        darkGreen: '#1a4d2e',
+        mediumGreen: '#3d7a4e',
+        golden: '#c9a961',
         lightGray: '#f8f9fa',
         darkText: '#333333',
-        white: '#ffffff',
       },
     },
   },
